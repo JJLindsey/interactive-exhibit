@@ -11,7 +11,7 @@
         @examine="openModal(item)"
       />
 
-      <ArtworkModal
+      <ArtworkModal2
         v-if="modalVisible"
         :visible="modalVisible"
         :data="selectedArtwork"
@@ -30,7 +30,7 @@
 import { ref } from 'vue';
 import { useMetArtAPI } from '@/composables/useMetArtAPI.js';
 import ArtworkCard from './ArtworkCard.vue';
-import ArtworkModal from './ArtworkModal.vue';
+import ArtworkModal2 from './ArtworkModalv2.vue';
 
 const {artworks, loading, error} = useMetArtAPI('baroque');
 const modalVisible = ref(false);
