@@ -9,9 +9,9 @@
         <p><strong>Year:</strong>{{ data.date }}</p>
         <p><strong>Gallery:</strong>{{ data.gallery }}</p>
         <p v-if="data.commentary">{{ data.commentary }}</p>
+        <p class="instructions">Click to examine</p>
         <button @click="close" class="close-button">Close</button>
       </div>
-      <div class="spotlight"></div>
     </div>
   </div>
 </template>
@@ -71,6 +71,12 @@ function close() {
   cursor: pointer;
 }
 
+.instructions {
+  font-size: 0.85rem;
+  opacity: 0.7;
+  margin-top: 0.5rem;
+}
+
 /* Spotlight */
 .spotlight {
   position: fixed;
@@ -83,5 +89,6 @@ function close() {
   );
   mix-blend-mode: overlay;
   transition: opacity var(--transition);
+  z-index: 45;
 }
 </style>

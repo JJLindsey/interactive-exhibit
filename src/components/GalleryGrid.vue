@@ -8,6 +8,14 @@
         v-for="item in artworks"
         :key="item.id"
         :data="item"
+        @examine="openModal(item)"
+      />
+
+      <ArtworkModal
+        v-if="modalVisible"
+        :visible="modalVisible"
+        :data="selectedArtwork"
+        @close="modalVisible = false"
       />
     </div>
     <!-- <div v-if="totalPages > 1" class="pagination">
@@ -19,10 +27,19 @@
 </template>
 
 <script setup>
+import { ref } from 'vue';
 import { useMetArtAPI } from '@/composables/useMetArtAPI.js';
 import ArtworkCard from './ArtworkCard.vue';
+import ArtworkModal from './ArtworkModal.vue';
 
 const {artworks, loading, error} = useMetArtAPI('baroque');
+const modalVisible = ref(false);
+const selectedArtwork = ref(null);
+
+function openModal(artwork) {
+  selectedArtwork.value = artwork;
+  modalVisible.value = true;
+}
 </script>
 
 <style scoped>
