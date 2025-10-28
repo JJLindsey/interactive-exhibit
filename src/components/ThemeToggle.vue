@@ -33,6 +33,7 @@ background: var(--surface);
 color: var(--gold);
 border: 1px solid var(--card-border);
 padding: 0.5rem 1rem;
+margin-right: 3rem;
 border-radius: var(--radius);
 font-family: var(--font-sans );
 cursor: pointer;

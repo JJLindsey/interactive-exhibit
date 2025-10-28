@@ -7,8 +7,7 @@ import ThemeToggle from "./components/ThemeToggle.vue";
   <div class="app-shell">
     <header class="app-header">
       <div>
-        <h1 class="app-title">Chiaroscuro Exhibition</h1>
-        <p class="app-sub">Caravaggio & the Drama of Light</p>
+        <h1 class="app-title">Exhibition</h1>
       </div>
       <ThemeToggle />
     </header>
