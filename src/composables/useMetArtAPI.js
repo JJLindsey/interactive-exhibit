@@ -21,7 +21,7 @@ export function useMetArtAPI() {
         return;
       }
 
-      const firstIDs = searchData.objectIDs.slice(0, 20);
+      const firstIDs = searchData.objectIDs.slice(0, 16);
 
       const artworksData = await Promise.all(
         firstIDs.map(async (id) => {
