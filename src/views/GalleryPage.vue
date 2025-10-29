@@ -17,7 +17,6 @@
       <p class="gallery-sub">
         Exploring chiaroscuro and the drama of light in the works of Caravaggio and other Baroque artists.
       </p>
-      <!-- <div class="header-ornament bottom"></div> -->
     </header>
 
     <!-- Need filter and/or search -->
@@ -103,13 +102,14 @@ import GalleryGrid from '@/components/GalleryGrid.vue';
 
 .gallery-heading {
   font-family: var(--font-serif);
-  color: var(--gold);
+  color: var(--highlight);
   font-size: clamp(2rem, 5vw, 3.5rem);
   margin-bottom: 1.5rem;
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: 0.02em;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 0.5rem;
 }
@@ -219,5 +219,26 @@ import GalleryGrid from '@/components/GalleryGrid.vue';
   color: var(--muted);
   opacity: 0.9;
   font-size: 1rem;
+}
+/* mobile media queris */
+@media (max-width: 480px) {
+  .gallery-page {
+    padding: 1rem 0.75rem;
+  }
+
+  .gallery-header {
+    margin-bottom: 2rem;
+  }
+
+  .gallery-heading {
+    font-size: clamp(1.25rem, 7vw, 1.8rem);
+    gap: 0.25rem;
+    line-height: 1.5;
+  }
+
+  h3 {
+    font-size: 0.9rem;
+    margin: 0.75rem 0;
+  }
 }
 </style>
