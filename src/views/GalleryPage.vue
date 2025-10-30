@@ -42,10 +42,10 @@ import GalleryGrid from '@/components/GalleryGrid.vue';
 
 .gallery-header {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   position: relative;
   z-index: 1;
-  max-width: 900px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -218,7 +218,7 @@ import GalleryGrid from '@/components/GalleryGrid.vue';
 .gallery-sub {
   color: var(--muted);
   opacity: 0.9;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 /* mobile media queris */
 @media (max-width: 480px) {
