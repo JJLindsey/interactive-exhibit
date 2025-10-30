@@ -296,7 +296,7 @@ function closeGlossary() {
   transition: background 0.2s, transform 0.2s;
 }
 .glossary-cta:hover {
-  background: var(--accent-dark);
+  background: var(--gold);
   transform: scale(1.05);
 }
 

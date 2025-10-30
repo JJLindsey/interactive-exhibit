@@ -8,6 +8,7 @@
         :src="imageUrl"
         :alt="data.title"
         class="artwork-image"
+        :style="data.imageStyle || {}" 
         @load="onImageLoad"
       />
       <div class="image-overlay">
