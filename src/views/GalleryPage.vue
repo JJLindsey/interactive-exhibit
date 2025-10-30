@@ -10,26 +10,43 @@
         <span class="heading-word" style="--word-index: 4">of</span>
         <span class="heading-word" style="--word-index: 5">Light</span>
       </h1>
-        <div class="collection-badge">
+      <div class="collection-badge">
         <div class="badge-shine"></div>
         <h3>Baroque Collection</h3>
       </div>
       <p class="gallery-sub">
         Exploring chiaroscuro and the drama of light in the works of Caravaggio and other Baroque artists.
       </p>
+      <button class="glossary-cta" @click="showGlossary = true">
+        Exhibition Info
+      </button>
     </header>
 
     <!-- Need filter and/or search -->
     <!-- <FilterPanel /> -->
     <!-- <SearchBar /> -->
-
-    <!-- The dynamic grid of artworks -->
+    <!-- <button
+      class="glossary-fab"
+      @click="showGlossary = true"
+      title="Glossary / Learn more"
+    >
+      ?
+    </button> -->
+    <GlossaryDialog :visible="showGlossary" @close="closeGlossary" />
     <GalleryGrid />
   </section>
 </template>
 
 <script setup>
+import { ref } from 'vue';
 import GalleryGrid from '@/components/GalleryGrid.vue';
+import GlossaryDialog from '@/components/GlossaryDialog.vue';
+
+const showGlossary = ref(false);
+
+function closeGlossary() {
+  showGlossary.value = false;
+}
 </script>
 
 <style scoped>
@@ -220,6 +237,69 @@ import GalleryGrid from '@/components/GalleryGrid.vue';
   opacity: 0.9;
   font-size: 1.5rem;
 }
+
+.glossary-section {
+  margin: 1rem auto;
+  max-width: 800px;
+  background: var(--bg);
+  border-radius: 1rem;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+.glossary-item {
+  margin-bottom: 1rem;
+}
+.glossary-item summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+.glossary-item p {
+  margin-top: 0.5rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.glossary-fab {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: var(--accent);
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.2s;
+  overflow: visible;
+}
+.glossary-fab:hover {
+  transform: scale(1.1);
+}
+
+.glossary-cta {
+  display: inline-block;
+  margin-top: 1rem;
+  background: var(--accent);
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+.glossary-cta:hover {
+  background: var(--accent-dark);
+  transform: scale(1.05);
+}
+
 /* mobile media queris */
 @media (max-width: 480px) {
   .gallery-page {
