@@ -58,6 +58,10 @@
                 <span class="detail-label">Culture</span>
                 <span class="detail-value">{{ data.culture }}</span>
               </div>
+              <div v-if="data?.artistBio" class="detail-item">
+                <span class="detail-label">Bio</span>
+                <span class="detail-value">{{ data.artistBio }}</span>
+              </div>
             </div>
 
             <div v-if="data?.creditLine" class="credit">
