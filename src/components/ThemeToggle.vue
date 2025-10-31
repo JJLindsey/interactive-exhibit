@@ -21,6 +21,12 @@ function applyTheme() {
   const exhibitionEl = document.querySelector('.exhibition-caravaggio');
   if (exhibitionEl) {
     exhibitionEl.setAttribute('data-exhibition-theme', theme.value);
+
+    // Add temporary fade effect
+    exhibitionEl.classList.add('theme-fade');
+    setTimeout(() => {
+      exhibitionEl.classList.remove('theme-fade');
+    }, 400); // Match animation duration
   }
   localStorage.setItem('exhibition-theme', theme.value);
 }
@@ -34,20 +40,28 @@ watch(theme, applyTheme);
 </script>
 <style scoped>
 .theme-toggle {
-background: var(--exhibition-surface);
+background: var(--exhibition-glass);
 color: var(--exhibition-text);
-border: 1px solid var(--exhibition-border);
+border: 1px solid var(--exhibition-gold);
 padding: 0.5rem 1rem;
 margin-right: 3rem;
 border-radius: var(--exhibition-radius);
 font-family: var(--exhibition-font-sans );
 cursor: pointer;
-transition: all var(--exhibition-transition);
+transition:
+    background-color var(--exhibition-transition),
+    color var(--exhibition-transition),
+    border-color var(--exhibition-transition),
+    transform 250ms ease,
+    box-shadow var(--exhibition-transition);
 }
 
 .theme-toggle:hover {
-  background: var(--exhibition-glass);
-  border-color: var(--exhibition-accent);
+  background: var(--exhibition-bg);
+  color: var(--exhibition-text);
+  border-color: var(--exhibition-highlight);
+  box-shadow: 0 0 12px var(--exhibition-highlight);
+  transform: translateY(-2px);
 }
 .center {
   display: flex;
