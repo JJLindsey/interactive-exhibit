@@ -58,7 +58,7 @@ function closeGlossary() {
 .gallery-page {
   padding: 2rem;
   background: var(--exhibition-bg);
-  color: var(--exhibition-text);
+  color: var(--exhibition-gold);
   transition: background var(--exhibition-transition), color var(--exhibtion-transition);
 }
 
@@ -106,7 +106,7 @@ function closeGlossary() {
   position: absolute;
   width: 8px;
   height: 8px;
-  background: var(--gold);
+  background: var(--exhibition-gold);
   border-radius: 50%;
   top: 50%;
   transform: translateY(-50%);
@@ -124,7 +124,7 @@ function closeGlossary() {
 
 .gallery-heading {
   font-family: var(--font-serif);
-  color: var(--exhibition-text);
+  color: var(--exhibition-gold);
   font-size: clamp(2rem, 5vw, 3.5rem);
   margin-bottom: 1.5rem;
   font-weight: 700;
@@ -150,7 +150,7 @@ function closeGlossary() {
   left: 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, transparent, var(--exhibition-text), transparent);
+  background: linear-gradient(90deg, transparent, var(--exhibition-gold), transparent);
   transform: scaleX(0);
   animation: underlineExpand 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   animation-delay: calc(1s + (var(--word-index) * 0.2s));
@@ -183,7 +183,7 @@ function closeGlossary() {
   gap: 0.75rem;
   padding: 0.75rem 2rem;
   background: linear-gradient(135deg, rgba(212, 176, 102, 0.15), rgba(199, 143, 69, 0.1));
-  border: 1px solid var(--exhibition-gold);
+  border: 1px solid var(--exhibition-highlight);
   border-radius: 50px;
   margin: 1.5rem auto;
   position: relative;
@@ -212,7 +212,7 @@ function closeGlossary() {
   background: linear-gradient(
     45deg,
     transparent 30%,
-    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.263) 50%,
     transparent 70%
   );
   animation: badgeShine 3s ease-in-out infinite;
@@ -230,7 +230,7 @@ function closeGlossary() {
 .collection-badge h3 {
   margin: 0;
   font-family: var(--font-serif);
-  color: var(--gold);
+  color: var(--exhibition-highlight);
   font-size: 1.1rem;
   font-weight: 600;
   letter-spacing: 0.05em;
@@ -240,13 +240,13 @@ function closeGlossary() {
 .gallery-sub {
   color: var(--exhibition-text);
   opacity: 0.9;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .glossary-section {
   margin: 1rem auto;
   max-width: 800px;
-  background: var(--exhihibition-glass);
+  background: var(--exhibition-glass);
   border-radius: 1rem;
   padding: 1.5rem 2rem;
   box-shadow: 0 0 20px rgba(0,0,0,0.1);

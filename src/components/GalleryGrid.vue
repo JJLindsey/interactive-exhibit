@@ -1,4 +1,5 @@
 <template>
+  <div class="exhibition-caravaggio" :data-exhibition-theme="exhibitionTheme">
   <div class="gallery-container">
 <!-- Light Study Mode -->
     <div class="controls-bar">
@@ -102,6 +103,7 @@
         @close="modalVisible = false"
       />
   </div>
+  </div>
     <!-- <div v-if="totalPages > 1" class="pagination">
       <button @click="prevPage" :disabled="page === 1">Prev</button>
       <span>Page {{ page }} of {{ totalPages }}</span>
@@ -177,9 +179,9 @@ function openModal(artwork) {
   gap: 0.75rem;
   padding: 0.75rem 1.5rem;
   background: rgba(212, 176, 102, 0.1);
-  border: 2px solid var(--card-border);
+  border: 2px solid var(--exhibition-border);
   border-radius: 50px;
-  color: var(--muted);
+  color: var(--exhibition-gold);
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -189,15 +191,15 @@ function openModal(artwork) {
 
 .light-mode-toggle:hover {
   background: rgba(212, 176, 102, 0.15);
-  border-color: var(--gold);
+  border-color: var(--exhibition-gold);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(212, 176, 102, 0.2);
 }
 
 .light-mode-toggle.active {
-  background: var(--gold);
+  background: var(--exhibition-gold);
   color: #1a1412;
-  border-color: var(--gold);
+  border-color: var(--exhibition-gold);
 }
 
 .light-mode-toggle svg {
@@ -214,10 +216,10 @@ function openModal(artwork) {
   gap: 2rem;
   align-items: center;
   padding: 1.5rem;
-  background: var(--glass);
+  background: var(--exhibition-glass);
   backdrop-filter: blur(10px);
-  border: 1px solid var(--card-border);
-  border-radius: var(--radius);
+  border: 1px solid var(--exhibition-border);
+  border-radius: var(--exhibition-radius);
   flex-wrap: wrap;
 }
 
@@ -248,7 +250,7 @@ function openModal(artwork) {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--gold);
+  color: var(--exhibition-gold);
   font-weight: 600;
   font-size: 0.9rem;
   white-space: nowrap;
@@ -268,7 +270,7 @@ function openModal(artwork) {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: var(--gold);
+  background: var(--exhibition-gold);
   cursor: pointer;
   transition: all 0.2s ease;
   box-shadow: 0 2px 8px rgba(212, 176, 102, 0.4);
@@ -283,14 +285,14 @@ function openModal(artwork) {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: var(--gold);
+  background: var(--exhibition-gold);
   cursor: pointer;
   border: none;
   transition: all 0.2s ease;
 }
 
 .value-display {
-  color: var(--muted);
+  color: var(--exhibition-highlight);
   font-weight: 600;
   font-size: 0.9rem;
   min-width: 2.5rem;
@@ -303,7 +305,7 @@ function openModal(artwork) {
   gap: 0.5rem;
   padding: 0.5rem 1rem;
   background: rgba(212, 176, 102, 0.1);
-  border: 1px solid var(--card-border);
+  border: 1px solid var(--exhibition-border);
   border-radius: 20px;
   color: var(--gold);
   font-weight: 600;
@@ -313,7 +315,7 @@ function openModal(artwork) {
 }
 
 .reset-button:hover {
-  background: var(--gold);
+  background: var(--exhibition-gold);
   color: #1a1412;
   transform: translateY(-2px);
 }
