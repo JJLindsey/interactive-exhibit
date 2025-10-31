@@ -66,11 +66,41 @@ body {
   background: linear-gradient(180deg, var(--exhibition-bg) 0%, var(--exhibition-surface) 100%);
   color: var(--exhibition-text);
   font-family: var(--font-sans);
-  transition: all 300ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition:
+    background-color var(--exhibition-transition),
+    color var(--exhibition-transition),
+    border-color var(--exhibition-transition),
+    box-shadow var(--exhibition-transition),
+    background var(--exhibition-transition),
+    filter var(--exhibition-transition);
+}
+
+.exhibition-caravaggio.theme-fade::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: var(--exhibition-bg);
+  opacity: 0.5;
+  pointer-events: none;
+  animation: fadeOverlay 400ms ease-in-out;
+  z-index: 999;
+}
+
+@keyframes fadeOverlay {
+  0% { opacity: 0.6; }
+  100% { opacity: 0; }
 }
 
 .center {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+.theme-toggle,
+.gallery-header,
+.gallery-page {
+  transition:
+    color var(--exhibition-transition),
+    background-color var(--exhibition-transition),
+    border-color var(--exhibition-transition);
 }
