@@ -1,6 +1,6 @@
 <script setup>
 import { RouterView } from 'vue-router'
-import ThemeToggle from "./components/ThemeToggle.vue";
+//import ThemeToggle from "./components/ThemeToggle.vue";
 </script>
 
 <template>
@@ -9,7 +9,6 @@ import ThemeToggle from "./components/ThemeToggle.vue";
       <div>
         <h1 class="app-title">Exhibition</h1>
       </div>
-      <ThemeToggle />
     </header>
 
     <main>

@@ -291,8 +291,9 @@ function closeGlossary() {
 .glossary-cta {
   display: inline-block;
   margin-top: 1rem;
-  background: var(--accent);
+  background: var(--exhibition-accent);
   color: white;
+  font-size: large;
   font-weight: bold;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
@@ -301,7 +302,7 @@ function closeGlossary() {
   transition: background 0.2s, transform 0.2s;
 }
 .glossary-cta:hover {
-  background: var(--gold);
+  background: var(--exhibition-gold);
   transform: scale(1.05);
 }
 
