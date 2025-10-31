@@ -36,8 +36,8 @@
 }
 
 .glossary-content {
-  background: var(--glass-strong);
-  border: 0.5px solid var(--card-border);
+  background: var(--exhibitglass-strong);
+  border: 0.5px solid var(--exhibition-border);
   padding: 3rem;
   border-radius: 1rem;
   max-width: 500px;
@@ -50,7 +50,7 @@
   top: 1rem;
   right: 1rem;
   background: transparent;
-  color: var(--gold);
+  color: var(--exhibition-gold);
   border: none;
   font-size: 2rem;
   cursor: pointer;
@@ -67,7 +67,7 @@
 
 .info-item {
   margin-bottom: 1rem;
-  color: var(--muted);
+  color: var(--exhibition-text);
   line-height: 1.5;
   font-size: 1.25rem;
 }

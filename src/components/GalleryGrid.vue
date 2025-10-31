@@ -338,7 +338,7 @@ function openModal(artwork) {
 
 .frame {
   position: absolute;
-  border: 3px solid var(--gold);
+  border: 3px solid var(--exhibition-gold);
   animation: rotateFrames 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 .frame-1 {
