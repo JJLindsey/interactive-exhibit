@@ -1,4 +1,6 @@
 <template>
+  <div class="exhibition-caravaggio">
+  <ThemeToggle/>
   <section class="gallery-page">
     <header class="gallery-header">
       <!-- <div class="header-ornament top"></div> -->
@@ -35,12 +37,15 @@
     <GlossaryDialog :visible="showGlossary" @close="closeGlossary" />
     <GalleryGrid />
   </section>
+  </div>
 </template>
 
 <script setup>
 import { ref } from 'vue';
 import GalleryGrid from '@/components/GalleryGrid.vue';
 import GlossaryDialog from '@/components/GlossaryDialog.vue';
+import '@/styles/exhibition-theme.css';
+import ThemeToggle from '@/components/ThemeToggle.vue';
 
 const showGlossary = ref(false);
 
@@ -52,9 +57,9 @@ function closeGlossary() {
 <style scoped>
 .gallery-page {
   padding: 2rem;
-  background: var(--bg);
-  color: var(--muted);
-  transition: background var(--transition), color var(--transition);
+  background: var(--exhibition-bg);
+  color: var(--exhibition-text);
+  transition: background var(--exhibition-transition), color var(--exhibtion-transition);
 }
 
 .gallery-header {
@@ -119,7 +124,7 @@ function closeGlossary() {
 
 .gallery-heading {
   font-family: var(--font-serif);
-  color: var(--highlight);
+  color: var(--exhibition-text);
   font-size: clamp(2rem, 5vw, 3.5rem);
   margin-bottom: 1.5rem;
   font-weight: 700;
@@ -145,7 +150,7 @@ function closeGlossary() {
   left: 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, transparent, var(--highlight), transparent);
+  background: linear-gradient(90deg, transparent, var(--exhibition-text), transparent);
   transform: scaleX(0);
   animation: underlineExpand 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   animation-delay: calc(1s + (var(--word-index) * 0.2s));
@@ -178,7 +183,7 @@ function closeGlossary() {
   gap: 0.75rem;
   padding: 0.75rem 2rem;
   background: linear-gradient(135deg, rgba(212, 176, 102, 0.15), rgba(199, 143, 69, 0.1));
-  border: 1px solid var(--gold);
+  border: 1px solid var(--exhibition-gold);
   border-radius: 50px;
   margin: 1.5rem auto;
   position: relative;
@@ -233,7 +238,7 @@ function closeGlossary() {
 }
 
 .gallery-sub {
-  color: var(--muted);
+  color: var(--exhibition-text);
   opacity: 0.9;
   font-size: 1.5rem;
 }
@@ -241,7 +246,7 @@ function closeGlossary() {
 .glossary-section {
   margin: 1rem auto;
   max-width: 800px;
-  background: var(--bg);
+  background: var(--exhihibition-glass);
   border-radius: 1rem;
   padding: 1.5rem 2rem;
   box-shadow: 0 0 20px rgba(0,0,0,0.1);
@@ -254,13 +259,13 @@ function closeGlossary() {
   cursor: pointer;
   font-weight: 600;
   font-size: 1.1rem;
-  color: var(--muted);
+  color: var(--exhibition-text);
   margin-bottom: 0.5rem;
 }
 .glossary-item p {
   margin-top: 0.5rem;
   line-height: 1.6;
-  color: var(--muted);
+  color: var(--exhibition-text);
 }
 .glossary-fab {
   position: fixed;

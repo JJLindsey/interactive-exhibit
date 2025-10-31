@@ -7,41 +7,51 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted,watch } from 'vue';
 
 const theme = ref('gallery');
 
 onMounted(() => {
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme) {
-    theme.value = savedTheme;
-    document.documentElement.setAttribute('data-theme', savedTheme);
-  } else {
-    document.documentElement.setAttribute('data-theme', theme.value);
-  }
+  const savedTheme = localStorage.getItem('exhibition-theme');
+  if (savedTheme) theme.value = savedTheme;
+  applyTheme();
 });
+
+function applyTheme() {
+  const exhibitionEl = document.querySelector('.exhibition-caravaggio');
+  if (exhibitionEl) {
+    exhibitionEl.setAttribute('data-exhibition-theme', theme.value);
+  }
+  localStorage.setItem('exhibition-theme', theme.value);
+}
 
 function toggleTheme() {
   theme.value = theme.value === 'gallery' ? 'conservator' : 'gallery';
-  document.documentElement.setAttribute('data-theme', theme.value);
-  localStorage.setItem('theme', theme.value);
+  applyTheme();
 }
+watch(theme, applyTheme);
+
 </script>
 <style scoped>
 .theme-toggle {
-background: var(--surface);
-color: var(--gold);
-border: 1px solid var(--card-border);
+background: var(--exhibition-surface);
+color: var(--exhibition-text);
+border: 1px solid var(--exhibition-border);
 padding: 0.5rem 1rem;
 margin-right: 3rem;
-border-radius: var(--radius);
-font-family: var(--font-sans );
+border-radius: var(--exhibition-radius);
+font-family: var(--exhibition-font-sans );
 cursor: pointer;
-transition: all var(--transition);
+transition: all var(--exhibition-transition);
 }
 
 .theme-toggle:hover {
-  background: var(--glass);
-  border-color: var(--gold);
+  background: var(--exhibition-glass);
+  border-color: var(--exhibition-accent);
+}
+.center {
+  display: flex;
+  justify-content: right;
+  padding: 1rem 0;
 }
 </style>
