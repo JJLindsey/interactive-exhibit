@@ -7,7 +7,7 @@ import { RouterView } from 'vue-router'
   <div class="app-shell">
     <header class="app-header">
       <div>
-        <h1 class="app-title">Exhibition</h1>
+        <h1 class="app-title">Interactive Exhibition</h1>
       </div>
     </header>
 
