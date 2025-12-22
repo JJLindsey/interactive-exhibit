@@ -8,7 +8,7 @@
         :src="imageUrl"
         :alt="data.title"
         class="artwork-image"
-        :style="data.imageStyle || {}" 
+        :style="data.imageStyle || {}"
         @load="onImageLoad"
       />
       <div class="image-overlay">
@@ -176,7 +176,7 @@ onMounted(() => {
 .artwork-title {
   margin: 0 0 0.5rem;
   font-size: 1.1rem;
-  color: var(--gold);
+  color: var(--exhibition-gold);
   font-weight: 600;
   line-height: 1.3;
   display: -webkit-box;

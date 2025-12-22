@@ -166,10 +166,10 @@ function closeModal() {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background: var(--highlight);
-  color: var(--surface);
+  background: var(--exhibition-highlight);
+  color: var(--exhibition-surface);
   border: 1px solid rgba(212, 176, 102, 0.3);
-  border-radius: var(--radius);
+  border-radius: var(--exhibition-radius);
   width: 40px;
   height: 40px;
   display: flex;
@@ -181,7 +181,7 @@ function closeModal() {
 }
 
 .close-btn:hover {
-  background: var(--gold);
+  background: var(--exhibition-gold);
   color: #1a1412;
   transform: rotate(90deg);
 }
@@ -344,25 +344,38 @@ function closeModal() {
 }
 
 /* Modal transitions */
-.modal-enter-active, .modal-leave-active {
+.modal-enter-active,
+.modal-leave-active {
   transition: opacity 0.3s ease;
 }
 
-.modal-enter-active .modal-container,
-.modal-leave-active .modal-container {
+.modal-container {
   transition: transform 0.3s ease;
 }
 
-.modal-enter-from, .modal-leave-to {
+.modal-enter-from {
   opacity: 0;
 }
 
 .modal-enter-from .modal-container {
-  transform: scale(0.9) translateY(20px);
+  transform: scale(0.95) translateY(20px);
+}
+
+.modal-leave-to {
+  opacity: 0;
 }
 
 .modal-leave-to .modal-container {
-  transform: scale(0.9) translateY(-20px);
+  transform: scale(0.95) translateY(-20px);
+}
+
+.modal-enter-to, .modal-leave-from {
+  opacity: 1;
+}
+
+.modal-enter-to .modal-container,
+.modal-leave-from .modal-container {
+  transform: scale(1) translateY(0);
 }
 
 /* Responsive */

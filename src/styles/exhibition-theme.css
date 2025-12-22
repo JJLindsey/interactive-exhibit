@@ -66,6 +66,7 @@ body {
   background: linear-gradient(180deg, var(--exhibition-bg) 0%, var(--exhibition-surface) 100%);
   color: var(--exhibition-text);
   font-family: var(--font-sans);
+  position: relative;
   transition:
     background-color var(--exhibition-transition),
     color var(--exhibition-transition),
@@ -80,16 +81,27 @@ body {
   position: fixed;
   inset: 0;
   background: var(--exhibition-bg);
-  opacity: 0.5;
+  opacity: 0.6;
   pointer-events: none;
   animation: fadeOverlay 400ms ease-in-out;
   z-index: 999;
 }
 
 @keyframes fadeOverlay {
-  0% { opacity: 0.6; }
+  0% { opacity: 0.9; }
   100% { opacity: 0; }
 }
+.exhibition-caravaggio::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--exhibition-bg);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s ease-in-out;
+  z-index: 999;
+}
+
 
 .center {
   display: flex;

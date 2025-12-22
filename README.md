@@ -1,6 +1,6 @@
 # interactive-exhibit
 
-This template should help get you started developing with Vue 3 in Vite.
+App using The Metropolitan Museum of Art Collection API
 
 ## Recommended IDE Setup
 
