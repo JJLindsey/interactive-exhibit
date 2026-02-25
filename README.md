@@ -4,6 +4,8 @@ An interactive virtual gallery built with Vue 3, exploring chiaroscuro and Baroq
 ## Overview
 This app pulls live data from The Met Collection API to present an immersive, museum-style experience centered on Caravaggio and the Baroque tradition. Visitors can explore artwork, examine details up close, and learn about the dramatic use of light that defines the period.
 
+Chiaroscuro means “light-dark” in Italian and describes the dramatic lighting technique that gives depth and realism to scenes. While the use of chiaroscuro dates back to the Renaissance, it was popular during the Baroque period by artists like Caravaggio, who used it to heighten emotional intensity.
+
 ### Features
 - Gallery Grid — Browse Baroque artworks fetched dynamically from The Met's open-access collection
 - Artwork Detail Modal — Click any piece to open a full-screen view with:
@@ -53,6 +55,15 @@ src/
   Fetches live artwork data from The Metropolitan Museum of Art's open-access Collection API, handling edge cases like missing images (fallback placeholder), absent metadata fields, and linking back to the canonical object page on the Met's website.
 - **CSS-Only Tooltips via data- attributes:**
   Added accessible hover tooltips using pure CSS with attr(data-tooltip) and ::after pseudo-elements — no JavaScript or tooltip library needed.
+
+#### Gallery Dark mode
+<img src="public/galleryDarkMode.png" alt="screen shot dark mode" width="250">
+
+#### Conservator Light mode
+<img src="public/conservatorLightMode.png" alt="screen shot of light mode" width="250">
+
+#### Light Study open
+<img src="public/studyMode.png" alt="screen shot light study mode" width="350">
 
 ### License
 © Jennifer Lindsey. All rights reserved.
