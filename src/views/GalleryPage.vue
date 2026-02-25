@@ -36,6 +36,7 @@
     </button> -->
     <GlossaryDialog :visible="showGlossary" @close="closeGlossary" />
     <GalleryGrid />
+    <span>© Jennifer Lindsey</span>
   </section>
   </div>
 </template>

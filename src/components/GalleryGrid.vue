@@ -7,6 +7,7 @@
         class="light-mode-toggle"
         :class="{ active: lightStudyMode }"
         @click="toggleLightMode"
+        data-tooltip="Explore chiarscuro effects"
       >
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <circle cx="12" cy="12" r="5"></circle>
@@ -194,6 +195,28 @@ function openModal(artwork) {
   border-color: var(--exhibition-gold);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(212, 176, 102, 0.2);
+}
+
+.light-mode-toggle::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1a1a2e;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 100;
+}
+
+.light-mode-toggle:hover::after {
+  opacity: 1;
 }
 
 .light-mode-toggle.active {
