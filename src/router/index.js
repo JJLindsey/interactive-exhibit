@@ -1,8 +1,8 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import GalleryPage from '@/views/GalleryPage.vue'
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory('/interactive-exhibit/'),
   routes: [
     {
       path: '/',
