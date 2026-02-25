@@ -5,7 +5,6 @@ An interactive virtual gallery built with Vue 3, exploring chiaroscuro and Baroq
 This app pulls live data from The Met Collection API to present an immersive, museum-style experience centered on Caravaggio and the Baroque tradition. Visitors can explore artwork, examine details up close, and learn about the dramatic use of light that defines the period.
 
 ### Features
-
 - Gallery Grid — Browse Baroque artworks fetched dynamically from The Met's open-access collection
 - Artwork Detail Modal — Click any piece to open a full-screen view with:
   * Zoom & pan (click to toggle 2.5× magnification, mouse-tracking zoom)
@@ -45,6 +44,15 @@ src/
 └── styles/
     └── exhibition-theme.css  # CSS variables & themes
 ```
+### Technical Highlights
+- **Zoom & Pan on Artwork Images:**
+  Implemented a click-to-toggle magnification system on the artwork modal using Vue's computed styles and ref tracking. Mouse position is captured relative to the image container and mapped to transform-origin percentages, creating a natural zoom-follows-cursor effect without any external library.
+- **Light Study Mode:**
+  Built an interactive lighting control panel that lets visitors explore simulated chiaroscuro effects in real time. The panel uses Vue's <Transition> with a slide animation for a polished reveal, keeping the UI uncluttered until the feature is needed.
+- **Met Museum API Integration:**
+  Fetches live artwork data from The Metropolitan Museum of Art's open-access Collection API, handling edge cases like missing images (fallback placeholder), absent metadata fields, and linking back to the canonical object page on the Met's website.
+- **CSS-Only Tooltips via data- attributes:**
+  Added accessible hover tooltips using pure CSS with attr(data-tooltip) and ::after pseudo-elements — no JavaScript or tooltip library needed.
 
 ### License
 © Jennifer Lindsey. All rights reserved.
