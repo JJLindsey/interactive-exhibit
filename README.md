@@ -1,44 +1,51 @@
-# interactive-exhibit
+#  Interactive Exhibit — Caravaggio & the Drama of Light
+An interactive virtual gallery built with Vue 3, exploring chiaroscuro and Baroque artistry through the Metropolitan Museum of Art's public API.
 
-App using The Metropolitan Museum of Art Collection API
+## Overview
+This app pulls live data from The Met Collection API to present an immersive, museum-style experience centered on Caravaggio and the Baroque tradition. Visitors can explore artwork, examine details up close, and learn about the dramatic use of light that defines the period.
 
-## Recommended IDE Setup
+### Features
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- Gallery Grid — Browse Baroque artworks fetched dynamically from The Met's open-access collection
+- Artwork Detail Modal — Click any piece to open a full-screen view with:
+  * Zoom & pan (click to toggle 2.5× magnification, mouse-tracking zoom)
+  * Metadata: title, artist, date, medium, dimensions, culture, department
+  * Credit line and direct link to the Met Museum website
 
-## Recommended Browser Setup
+- Light Study Mode — Adjust simulated lighting to explore chiaroscuro effects interactively
+- Glossary / Exhibition Info Dialog — Contextual information about Baroque art and key terms
+- Theme Toggle — Switch between light and dark exhibition themes
+- Smooth transitions — Vue <Transition> animations on modal open/close and panel reveals
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) 
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+### Tech Stack
+| Layer | Technology |
+| ------ | ------------- |
+Framework | Vue 3 (Composition API) 
+Data | The Metropolitan Museum of Art Collection API
+Styling | Scoped CSS with CSS custom properties
+Animations | Vue Transitions + CSS keyframes
 
-## Customize configuration
+### API
+This project uses The Metropolitan Museum of Art's free, open-access API — no API key required.
+Base URL: https://collectionapi.metmuseum.org/public/collection/v1
 
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+### Project Structure
+```
+src/
+├── components/
+│   ├── GalleryGrid.vue       # Main artwork grid
+│   ├── ArtworkModal.vue      # Detail view with zoom
+│   ├── GlossaryDialog.vue    # Exhibition info & art terms
+|   ├── ArtworkCard.vuw       # Artwork
+│   └── ThemeToggle.vue       # Light/dark theme switcher
+├── views/
+│   └── GalleryPage.vue       # Main page layout
+├── composables/
+│   └── useMetArtAPI.js       # fetch & filter artwork from Met API
+└── styles/
+    └── exhibition-theme.css  # CSS variables & themes
 ```
 
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+### License
+© Jennifer Lindsey. All rights reserved.
+Artwork data and images are provided by The Metropolitan Museum of Art under their Open Access policy.
