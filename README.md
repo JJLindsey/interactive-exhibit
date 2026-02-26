@@ -1,5 +1,5 @@
-#  Interactive Exhibit — Caravaggio & the Drama of Light
-An interactive virtual gallery built with Vue 3, exploring chiaroscuro and Baroque artistry through the Metropolitan Museum of Art's public API.
+#  Curated Interactive Exhibit — Caravaggio & the Drama of Light
+A curated interactive virtual gallery built with Vue 3, exploring chiaroscuro and Baroque artistry through the Metropolitan Museum of Art's public API. Contextual artwork facts surfaced per piece — highlights Met collection status, artist biography details, and period context.
 
 ## Overview
 This app pulls live data from The Met Collection API to present an immersive, museum-style experience centered on Caravaggio and the Baroque tradition. Visitors can explore artwork, examine details up close, and learn about the dramatic use of light that defines the period.
@@ -8,6 +8,7 @@ Chiaroscuro means “light-dark” in Italian and describes the dramatic lightin
 
 ### Features
 - Gallery Grid — Browse Baroque artworks fetched dynamically from The Met's open-access collection
+- Custom Vue composable (useMetArtAPI) with multi-layer filtering — API results are validated against Baroque date ranges and     period metadata client-side to ensure exhibition accuracy
 - Artwork Detail Modal — Click any piece to open a full-screen view with:
   * Zoom & pan (click to toggle 2.5× magnification, mouse-tracking zoom)
   * Metadata: title, artist, date, medium, dimensions, culture, department
