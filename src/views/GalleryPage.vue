@@ -17,7 +17,7 @@
         <h3>Baroque Collection</h3>
       </div>
       <p class="gallery-sub">
-        Exploring chiaroscuro and the drama of light in the works of Caravaggio and other Baroque artists.
+        A curated exhibit to explore chiaroscuro and the drama of light in the works of Caravaggio and other Baroque artists.
       </p>
       <button class="glossary-cta" @click="showGlossary = true">
         Exhibition Info
@@ -241,7 +241,7 @@ function closeGlossary() {
 .gallery-sub {
   color: var(--exhibition-text);
   opacity: 0.9;
-  font-size: 1.25rem;
+  font-size: 1.30rem;
 }
 
 .glossary-section {

@@ -10,8 +10,8 @@
         </button>
 
         <div class="modal-content">
-          <div class="image-section" @mousemove="handleZoom" @mouseleave="resetZoom">
-            <div class="image-wrapper" :class="{ 'zoomed': isZoomed }">
+          <div class="image-section" @mousemove="handleZoom">
+            <div class="image-wrapper" :class="{ 'zoomed': isZoomed }" @mouseleave="resetZoom">
               <img
                 ref="imageRef"
                 :src="imageUrl"
@@ -151,7 +151,7 @@ function closeModal() {
 }
 
 .modal-container {
-  background: linear-gradient(135deg, #1a1412 0%, #2a1f1c 100%);
+  background: var(--exhibition-surface);
   border: 1px solid rgba(212, 176, 102, 0.3);
   border-radius: 16px;
   max-width: 1200px;
@@ -316,12 +316,11 @@ function closeModal() {
 
 .credit {
   padding: 1rem;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.2);
   border-left: 3px solid #D4B066;
   font-size: 0.85rem;
-  color: var(--muted);
+  color: var(--exhibition-text);
   opacity: 0.7;
-  font-style: italic;
 }
 
 .met-link {
@@ -330,7 +329,7 @@ function closeModal() {
   gap: 0.5rem;
   padding: 0.75rem 1.5rem;
   background: var(--highlight);
-  color: #1a1412;
+  color: var(--exhibition-text);
   text-decoration: none;
   border-radius: 8px;
   font-weight: 600;
