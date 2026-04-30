@@ -60,6 +60,9 @@ src/
 #### Go to Case Study
 [View Product Case Study(PDF)](public/ImmersiveGalleryProductDesignReduce.pdf)
 
+#### Problem Statement
+<img src="public/ProblemStatement.png" alt="screenshot case study problem statement" width="350">
+
 #### Gallery Dark mode
 <img src="public/galleryDarkMode.png" alt="screen shot dark mode" width="250">
 
