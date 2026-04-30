@@ -57,6 +57,9 @@ src/
 - **CSS-Only Tooltips via data- attributes:**
   Added accessible hover tooltips using pure CSS with attr(data-tooltip) and ::after pseudo-elements — no JavaScript or tooltip library needed.
 
+#### Go to Case Study
+[View Product Case Study(PDF)](public/ImmersiveGalleryProductDesignReduce.pdf)
+
 #### Gallery Dark mode
 <img src="public/galleryDarkMode.png" alt="screen shot dark mode" width="250">
 
