@@ -1,6 +1,9 @@
 #  Exhibition Engine — Baroque Chiaroscuro Study
 How do you translate the physical 'Weight' of the Old Masters into a digital environment? This project is a technical exploration of Digital Stewardship, using the Metropolitan Museum of Art’s collection to redefine the virtual gallery experience.A curated virtual gallery built with Vue 3, exploring chiaroscuro and Baroque artistry through the Metropolitan Museum of Art's public API. Contextual artwork facts surfaced per piece — highlights Met collection status, artist biography details, and period context.
 
+**[Live App](https://jjlindsey.github.io/interactive-exhibit/#/)**
+
+
 ## Overview
 The virtual gallery pulls live data from The Met Collection API to present an immersive, museum-style experience centered on Caravaggio and the Baroque tradition. Visitors can explore artwork, examine details up close, and learn about the dramatic use of light that defines the period. A custom Vue 3 logic layer that validates metadata against historical date ranges (1580–1750), ensuring the digital archive remains academically rigorous and historically accurate.
 
