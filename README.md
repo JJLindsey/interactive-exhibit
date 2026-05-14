@@ -60,7 +60,7 @@ src/
 - **CSS-Only Tooltips via data- attributes:**
   Added accessible hover tooltips using pure CSS with attr(data-tooltip) and ::after pseudo-elements — no JavaScript or tooltip library needed.
 
-#### Go to Case Study
+### Go to Design Case Study
 [View Product Case Study(PDF)](public/ImmersiveGalleryProductDesignReduce.pdf)
 
 #### Problem Statement
