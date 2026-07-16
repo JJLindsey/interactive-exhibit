@@ -76,5 +76,5 @@ src/
 <img src="public/studyMode.png" alt="screen shot light study mode" width="350">
 
 ### License
-© Jennifer Lindsey. All rights reserved.
+© Jennifer Lindsey. All rights reserved. Available for review; not licensed for reuse.
 Artwork data and images are provided by The Metropolitan Museum of Art under their Open Access policy.
