@@ -7,7 +7,8 @@
         class="light-mode-toggle"
         :class="{ active: lightStudyMode }"
         @click="toggleLightMode"
-        data-tooltip="Explore chiarscuro effects"
+        data-tooltip="Explore chiaroscuro effects"
+        :aria-pressed="lightStudyMode"
       >
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <circle cx="12" cy="12" r="5"></circle>
@@ -197,6 +198,11 @@ function openModal(artwork) {
   box-shadow: 0 4px 12px rgba(212, 176, 102, 0.2);
 }
 
+.light-mode-toggle:focus-visible {
+  outline: 3px solid var(--exhibition-gold);
+  outline-offset: 3px;
+}
+
 .light-mode-toggle::after {
   content: attr(data-tooltip);
   position: absolute;
@@ -215,7 +221,8 @@ function openModal(artwork) {
   z-index: 100;
 }
 
-.light-mode-toggle:hover::after {
+.light-mode-toggle:hover::after,
+.light-mode-toggle:focus-visible::after {
   opacity: 1;
 }
 
