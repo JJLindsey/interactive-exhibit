@@ -46,7 +46,9 @@ Animations | Vue Transitions + CSS keyframes
 
 ### API
 This project uses The Metropolitan Museum of Art's free, open-access API — no API key required.
-Base URL: https://collectionapi.metmuseum.org/public/collection/v1
+Base URL: https://collectionapi.metmuseum.org/public/collection/v1.1.
+
+Note: Updated October 2026 to use the Met’s paginated /v1.1 search after /v1/search was retired
 
 ### Project Structure
 ```

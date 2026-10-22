@@ -7,7 +7,7 @@ export function useMetArtAPI(searchQuery = 'Caravaggio Baroque', options = {}) {
   const totalAvailable = ref(0);
 
   const {
-    limit = 16,
+    limit = 48,
     departmentId = 11, // European Paintings
     randomize = false,
     hasImages = true
@@ -30,7 +30,7 @@ export function useMetArtAPI(searchQuery = 'Caravaggio Baroque', options = {}) {
       });
 
       const searchRes = await fetch(
-        `https://collectionapi.metmuseum.org/public/collection/v1/search?${searchParams}`
+        `https://collectionapi.metmuseum.org/public/collection/v1.1/search?${searchParams}`
       );
       const searchData = await searchRes.json();
 
