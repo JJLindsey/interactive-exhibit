@@ -77,7 +77,7 @@ src/
   Added accessible hover tooltips using pure CSS with attr(data-tooltip) and ::after pseudo-elements — no JavaScript or tooltip library needed.
 
 #### Go to Case Study
-[View Case Study(PDF)](public/ImmersiveGalleryProductDesignReduce.pdf)
+[View Case Study(PDF)](public/CaseStudyImmersiveGalleryPDF.pdf)
 
 #### Problem Statement
 <img src="public/ProblemStatement.png" alt="screenshot case study problem statement" width="350">
